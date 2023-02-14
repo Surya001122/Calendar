@@ -49,7 +49,7 @@ public class ValidationUtilities {
     public static boolean validatePhoneNumber(String phoneNumber) {
         Pattern pattern = Pattern.compile("^[0-9].{7,15}$");
         Matcher matcher = pattern.matcher(phoneNumber);
-        return matcher.matches();
+        return !matcher.matches();
     }
 
     public static boolean isEqual(int day, int month, int year, String date) {
